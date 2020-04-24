@@ -11,7 +11,7 @@ const SignedInLinks = () => {
         <NavLink to="/">Log Out</NavLink>
       </li>
       <li>
-        <NavLink to="/" className="btb btb-floating pink lighten-1">
+        <NavLink to="/" className="btn btn-floating pink lighten-3">
           NN
         </NavLink>
       </li>
