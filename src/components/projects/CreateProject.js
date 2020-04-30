@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { createProject } from "../../store/actions/projectActions";
 import { connect } from "react-redux";
-import { createStore } from "redux";
 import { Redirect } from "react-router-dom";
 
 class CreateProject extends Component {
