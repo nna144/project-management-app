@@ -1,9 +1,8 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
-import "firebase/analytics";
 
-// Your web app's Firebase configuration
+// App's firebase configuration.
 var firebaseConfig = {
   apiKey: "AIzaSyCE8vw-Jbot863fVJOI56gkCm5QIOnYNnM",
   authDomain: "project-mangement-app.firebaseapp.com",
@@ -16,9 +15,10 @@ var firebaseConfig = {
   userProfile: "users",
   useFirestoreForProfile: true,
 };
-// Initialize Firebase
+// Initialize firebase instance.
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+
+// Initialize other service on firebase instance.
 firebase.firestore();
 
 export default firebase;

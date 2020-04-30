@@ -13,7 +13,7 @@ import {
   reduxFirestore,
 } from "redux-firestore";
 import {
-  ReactReduxFirebaseProvider,
+  ReactReduxFirebaseProvider, // Used to make instance availble to HOCs.
   getFirebase,
   isLoaded,
 } from "react-redux-firebase";
@@ -27,16 +27,18 @@ const store = createStore(
     reduxFirestore(fbConfig)
   )
 );
+
+// React-redux-firebase config.
 const rrfConfig = {
   userProfile: "users",
-  useFirestoreForProfile: true,
+  useFirestoreForProfile: true, // Firestore for Profile instead of Realtime DB.
 };
 
 const rrfProps = {
   firebase,
   config: rrfConfig,
   dispatch: store.dispatch,
-  createFirestoreInstance, // <- needed if using firestore
+  createFirestoreInstance,
 };
 
 function AuthIsLoaded({ children }) {
