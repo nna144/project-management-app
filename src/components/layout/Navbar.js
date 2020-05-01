@@ -13,10 +13,10 @@ const Navbar = (props) => {
     <SignedOutLinks />
   );
   return (
-    <nav className="nav-wrapper grey darken-3">
+    <nav className="nav-wrapper grey darken-1">
       <div className="container">
-        <Link to="/" className="brand-logo">
-          Project Management
+        <Link to="/" className="brand-logo light-blue-text text-lighten-2">
+          Project Management App
         </Link>
         {auth.isLoaded && links}
       </div>
